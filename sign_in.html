@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sign In</title>
+</head>
+<body onmousemove="main()">
+    <div class="main">
+        <h1>Sign In</h1>
+        <input type="text" id="user_name" placeholder="First Name">
+        <input type="text" id="last_name" placeholder="Last Name">
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <a href="index.html">Already Have Account | Log In</a><br>
+        <button id="signin_btn" onclick="mn()">Sign In</button>
+    </div>
+    <script>
+        function main(){
+            // Declaration of variables //
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+            let signin_btn = document.getElementById("signin_btn");
+            let user_name = document.getElementById("user_name");
+            let last_name = document.getElementById("last_name");
+            if(email.value=="" || password.value=="" || user_name.value=="" || last_name==""){
+                signin_btn.disabled = true;
+            }else if(email.value!="" && password.value!="" && user_name.value!="" && last_name!=""){
+                signin_btn.disabled = false;
+            };
+
+        }
+        function mn(){
+            alert("Sign In Sucessful !");
+        }
+    </script>
+</body>
+</html>
